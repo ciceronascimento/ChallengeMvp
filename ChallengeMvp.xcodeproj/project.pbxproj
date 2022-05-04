@@ -11,6 +11,11 @@
 		DD610CE02822005800C74591 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD610CDF2822005800C74591 /* ContentView.swift */; };
 		DD610CE22822005A00C74591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD610CE12822005A00C74591 /* Assets.xcassets */; };
 		DD610CE52822005A00C74591 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD610CE42822005A00C74591 /* Preview Assets.xcassets */; };
+		DD610CED2822011D00C74591 /* NoticiasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD610CEC2822011D00C74591 /* NoticiasView.swift */; };
+		DD610CEF2822012C00C74591 /* OcorrenciasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD610CEE2822012C00C74591 /* OcorrenciasView.swift */; };
+		DD610CF12822014400C74591 /* PerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD610CF02822014400C74591 /* PerfilView.swift */; };
+		DD610CF32822015000C74591 /* SaudeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD610CF22822015000C74591 /* SaudeView.swift */; };
+		DD610CF5282201B000C74591 /* MarcarConsultaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD610CF4282201B000C74591 /* MarcarConsultaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		DD610CDF2822005800C74591 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DD610CE12822005A00C74591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD610CE42822005A00C74591 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DD610CEC2822011D00C74591 /* NoticiasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticiasView.swift; sourceTree = "<group>"; };
+		DD610CEE2822012C00C74591 /* OcorrenciasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcorrenciasView.swift; sourceTree = "<group>"; };
+		DD610CF02822014400C74591 /* PerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilView.swift; sourceTree = "<group>"; };
+		DD610CF22822015000C74591 /* SaudeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaudeView.swift; sourceTree = "<group>"; };
+		DD610CF4282201B000C74591 /* MarcarConsultaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcarConsultaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,7 @@
 		DD610CD12822005700C74591 = {
 			isa = PBXGroup;
 			children = (
+				DD610CEB282200E900C74591 /* View */,
 				DD610CDC2822005800C74591 /* ChallengeMvp */,
 				DD610CDB2822005800C74591 /* Products */,
 			);
@@ -65,6 +76,18 @@
 				DD610CE42822005A00C74591 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DD610CEB282200E900C74591 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD610CEC2822011D00C74591 /* NoticiasView.swift */,
+				DD610CEE2822012C00C74591 /* OcorrenciasView.swift */,
+				DD610CF02822014400C74591 /* PerfilView.swift */,
+				DD610CF22822015000C74591 /* SaudeView.swift */,
+				DD610CF4282201B000C74591 /* MarcarConsultaView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +161,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD610CE02822005800C74591 /* ContentView.swift in Sources */,
+				DD610CF5282201B000C74591 /* MarcarConsultaView.swift in Sources */,
+				DD610CED2822011D00C74591 /* NoticiasView.swift in Sources */,
+				DD610CF12822014400C74591 /* PerfilView.swift in Sources */,
 				DD610CDE2822005800C74591 /* ChallengeMvpApp.swift in Sources */,
+				DD610CEF2822012C00C74591 /* OcorrenciasView.swift in Sources */,
+				DD610CF32822015000C74591 /* SaudeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
