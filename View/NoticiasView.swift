@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct NoticiasView: View {
+    @State var text: String = ""
+    
     let selectedDisplayMode: NavigationBarItem.TitleDisplayMode = .large
     let navigationTitle: String = "Notícias"
     
@@ -26,6 +28,7 @@ struct NoticiasView: View {
                     CardView(imagem: "imagemteste2", categoria: "E-books", titulo: "Com lançamento de obras, EDIFCE celebra novo marco", autor: "Escrito por Douglas Lima")
                 }
             }
+            .searchable(text: $text, placement: .navigationBarDrawer(displayMode: .always))
             .navigationTitle(navigationTitle)
             .navigationBarTitleDisplayMode(selectedDisplayMode)
             

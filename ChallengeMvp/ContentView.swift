@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-
+extension Color{
+    static let GreenSpecial = Color("GreenSpecial")
+}
 
 struct ContentView: View {
+    
 
     var body: some View {
         TabView {
@@ -35,7 +38,7 @@ struct ContentView: View {
                     Text("Perfil")
                 }
         }
-        .accentColor(.green)
+        .accentColor(.GreenSpecial)
         .font(.headline)
     }
 }

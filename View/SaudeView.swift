@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SaudeView: View {
     
+    @State var text: String = ""
     let selectedDisplayMode: NavigationBarItem.TitleDisplayMode = .large
     let navigationTitle: String = "Consultas"
     
@@ -22,11 +23,11 @@ struct SaudeView: View {
     var body: some View {
         NavigationView{
             Form{
-                Text("Barra search aqui")
                 Section(){
                     Text("Cards começam aqui")
                 }
             }
+            .searchable(text: $text, placement: .navigationBarDrawer(displayMode: .always))
             .navigationTitle(navigationTitle)
             .navigationBarTitleDisplayMode(selectedDisplayMode)
             .toolbar{
