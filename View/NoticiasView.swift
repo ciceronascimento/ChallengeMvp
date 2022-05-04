@@ -20,14 +20,15 @@ struct NoticiasView: View {
     
     var body: some View {
         NavigationView{
-            Form{
-                Text("Barra search aqui")
+            ScrollView(.vertical){
                 Section(){
-                    Text("Cards começam aqui")
+                    CardView(imagem: "imagemteste", categoria: "Oportunidade", titulo: "Inscrições abertas para Programa de Bolsa Permanência", autor: "Escrito por Cláudia monteiro")
+                    CardView(imagem: "imagemteste2", categoria: "E-books", titulo: "Com lançamento de obras, EDIFCE celebra novo marco", autor: "Escrito por Douglas Lima")
                 }
             }
             .navigationTitle(navigationTitle)
             .navigationBarTitleDisplayMode(selectedDisplayMode)
+            
         }
     }
 }

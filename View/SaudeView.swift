@@ -30,22 +30,16 @@ struct SaudeView: View {
             .navigationTitle(navigationTitle)
             .navigationBarTitleDisplayMode(selectedDisplayMode)
             .toolbar{
-                Button(action: {
-                    NavigationLink(destination:
-                        EmptyView()
-                            .navigationTitle("Destination")
-                            .navigationBarTitleDisplayMode(.inline)
-                    ) {
-                        Text("Destination")
-                    }
-                }) {
-                    
-
+                NavigationLink(destination:
+                    MarcarConsultaView()
+                        .navigationTitle("Marcar consulta")
+                        .navigationBarTitleDisplayMode(.inline)
+                ) {
                     Image(systemName: "plus")
                         .imageScale(.large)
                         .foregroundColor(.accentColor)
                 }
-            
+        
             }
         }
     }

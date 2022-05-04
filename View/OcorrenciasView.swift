@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct OcorrenciasView: View {
+    
+    //data
     @State private var dataOcorrencia = Date()
     @State private var horaOcorrencia = Date()
     
@@ -30,7 +32,7 @@ struct OcorrenciasView: View {
     @State private var turmaSelecionada = ""
     
     let dataHora = ["13:10 30/01/1992", "13:10 30/01/2002"]
-    @State private var dataHoraSelecionada = "               "
+    @State private var dataHoraSelecionada = " "
     
     //textfield
     @State private var text: String = ""
@@ -55,30 +57,22 @@ struct OcorrenciasView: View {
                         Text($0)
                     }
                 }
-                
                 Picker("Selecione a turma", selection: $turmaSelecionada) {
                     ForEach(turma, id: \.self){
                         Text($0)
                     }
                 }
-                
                 DatePicker(selection: $dataOcorrencia, in: ...Date(), displayedComponents: .date, label: {
                     Text("Selecione a data")
                 })
-                
                 DatePicker("Time", selection: $horaOcorrencia, displayedComponents: .hourAndMinute)
-                
-                
-                
                 Section{
                     Label("Digite aqui o que aconteceu:", systemImage: "highlighter")
                     TextEditor(text: $text)
                         .frame(height: 286)
                 }
-                
-
             }
-            .navigationTitle(navigationTitle)
+            .navigationTitle(navigationTitle)	
             .navigationBarTitleDisplayMode(selectedDisplayMode)
             .toolbar{
                 Button(action: {

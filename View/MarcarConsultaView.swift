@@ -8,8 +8,53 @@
 import SwiftUI
 
 struct MarcarConsultaView: View {
+    
+    @State private var showingAlert = false
+    
+    @State private var dataConsulta = Date()
+    @State private var horaConsulta = Date()
+    
+    let especialidade = ["Psicologia", "Odontologia", "Clínico geral"]
+    @State private var especialidadeSelecionada = ""
+    
+    let colaborador = ["Jane Cooper"]
+    @State private var colaboradorSelecionado = ""
+    
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            Form{
+                Picker("Especialidade", selection: $especialidadeSelecionada) {
+                    ForEach(especialidade, id: \.self){
+                        Text($0)
+                    }
+                }.pickerStyle(DefaultPickerStyle())
+                
+                Picker("Colaborador", selection: $colaboradorSelecionado) {
+                    ForEach(colaborador, id: \.self){
+                        Text($0)
+                    }
+                }.pickerStyle(DefaultPickerStyle())
+                
+                DatePicker("Data", selection: $horaConsulta)
+                    .datePickerStyle(GraphicalDatePickerStyle())
+                
+            }
+        }
+        .toolbar{
+            Button(action: {
+                showingAlert = true
+            }) {
+                Text("Salvar")
+//                    print("Enviado")
+            }.alert(Text("Sua consulta foi marcada!"), isPresented: $showingAlert,
+                    actions: {
+                Button("Fechar") {}
+            }, message: {
+                Text("Aguardamos ansiosamente a sua presença!")
+            })
+        }
     }
 }
 
