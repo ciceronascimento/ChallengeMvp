@@ -22,11 +22,17 @@ struct SaudeView: View {
     
     var body: some View {
         NavigationView{
-            Form{
-                Section(){
-                    Text("Cards começam aqui")
-                }
+            ScrollView(.vertical){
+                CardConsultaView(mes: "JUNHO", dia: "30", horario: "09:30 AM", especialidade: "Psicóloga", nome: "Jane Cooper")
+//                .padding()
+                
+                CardConsultaView(mes: "AGOSTO", dia: "30", horario: "08:00 AM", especialidade: "Clínico geral", nome: "Dr Calisto")
+                
+//                    .padding()
+                CardConsultaView(mes: "SETEMBRO", dia: "22", horario: "10:41AM", especialidade: "Dentista", nome: "PH")
+//                    .padding()
             }
+            .padding([.top])
             .searchable(text: $text, placement: .navigationBarDrawer(displayMode: .always))
             .navigationTitle(navigationTitle)
             .navigationBarTitleDisplayMode(selectedDisplayMode)
