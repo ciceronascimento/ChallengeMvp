@@ -22,9 +22,6 @@ struct CardConsultaView: View {
             Rectangle()
                 .foregroundColor(.white)
             
-//            Rectangle()
-//                .fill(Color.GreenSpecial)
-//                .frame(minWidth: 0, maxWidth: 123, maxHeight: 157, alignment: .top)
             
             HStack {
                 VStack(alignment: .center, spacing: 0) {
@@ -49,9 +46,6 @@ struct CardConsultaView: View {
                 .frame(maxWidth: 123, maxHeight: .infinity)
                 .background(Color.GreenSpecial)
                 
-                HStack{
-                    
-                }
                 VStack(alignment: .leading){
                     
                     HStack{
@@ -63,8 +57,9 @@ struct CardConsultaView: View {
                         Text(nome)
                             .font(.title)
                             .multilineTextAlignment(.trailing)
-                    }
+                        }
 
+                    }
                 }
             }
             
@@ -79,6 +74,7 @@ struct CardConsultaView: View {
 //        .accentColor(.green)
         .padding()
     }
+    
 }
 
 struct CardConsultaView_Previews: PreviewProvider {
